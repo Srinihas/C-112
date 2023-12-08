@@ -20,13 +20,11 @@ if list1 == []:
 elif list1 != []:
   y = list1 
 
-print(f"Uploads folder has {x} in it")
-print(f"Downloads folder has {y} in it")
-
-
+print("Uploads folder has"+ {x} + "in it")
+print("Downloads folder has"+ {y} +"in it")
 for i in list1:
   name, extension =  o.path.splitext(i)
-  print(f"name of file is {name} and its file type is {extension}")
+  print("name of file is "+ {name} "and its file type is" + {extension})
   if extension == "":
     continue
   else:
@@ -36,9 +34,9 @@ for i in list1:
         path2 = to_dir + '/' + "Document_Files"
         path3 = to_dir + '/' + "Document_Files" + '/' + name
         if o.path.exists(path2):
-          print(f"Moving {name}")
+          print("Moving " +{name})
           s.move(path1, path3)
         else:
           o.makedirs(path2)
-          print(f"Moving {name}")
+          print("Moving "+ {name})
           s.move(path1, path3)
